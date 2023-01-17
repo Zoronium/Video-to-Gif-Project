@@ -4,7 +4,8 @@ This is a simple web application that allows users to upload a video file and co
 The application is built using Flask, a micro web framework for Python, and uses the `moviepy` library for video editing and compression.
 
 ### Deployment Link
-[https://video-to-gif-project-production.up.railway.app/](https://video-to-gif-project-production.up.railway.app/)
+[https://video-to-gif-project.up.railway.app/](https://video-to-gif-project.up.railway.app/)
+
 ![image](https://user-images.githubusercontent.com/89680252/212937441-b3828a0b-820b-4d5b-a6f6-c2c2ff8e606f.png)
 
 done on railway
