@@ -1,7 +1,7 @@
 from flask import Flask , request , render_template , send_file
 from werkzeug.utils import secure_filename
 from vidtogig import video_to_gif
-from os import remove , mkdir , rmdir , path
+from os import remove , mkdir , rmdir , path , getenv
 
 app = Flask(__name__)
 
@@ -40,4 +40,4 @@ def allowed_files(filename):
 ALLOWED_EXTENSIONS = {"mp4"}
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=80 , debug=False)
+    app.run(port=getenv("PORT", default=5000), debug=False)
