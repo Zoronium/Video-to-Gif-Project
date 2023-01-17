@@ -1,6 +1,7 @@
 from flask import Flask , request , render_template , send_file
 from werkzeug.utils import secure_filename
 from vidtogig import video_to_gif
+from os import remove , mkdir , rmdir , path
 
 app = Flask(__name__)
 
@@ -14,13 +15,23 @@ def upload_file():
     duration = request.form['duration']
     if file and allowed_files(file.filename):
         filename = secure_filename(file.filename)
-        file.save(filename)
-        video_to_gif(filename , int(duration))
+        file.save("./temp/userfile.mp4")
+        video_to_gif("./temp/userfile.mp4" , int(duration))
         gif_path = filename.replace(".mp4", ".gif")
-        return send_file(gif_path , as_attachment=True)
-    
+        return_data = "./temp/userfile.gif"
+        remove("./temp/userfile.mp4")
+        return send_file(return_data ,mimetype='video/mp4' , download_name=gif_path , as_attachment=True)
     else:
         return "File not supported"
+
+@app.after_request
+def after_request_del_file( response):
+    if path.isfile("./temp/userfile.mp4"):
+        remove("./temp/userfile.gif")
+    if not path.isdir("./temp"):
+        mkdir("./temp")
+    return response
+
 
 def allowed_files(filename):
     return "." in filename and \
