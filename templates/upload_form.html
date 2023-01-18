@@ -1,43 +1,94 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>Upload Video</title>
-</head>
-<style>
-    form {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        min-height: 50vh;
-        max-width: 100vh;
-        margin: auto;
-        width: 50%;
-        padding: 10px;
-        flex-wrap: wrap;
-        align-content: space-around;
-        align-items: baseline;
-    }
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video to Gif Converter</title>
+    <style>
+        body {
+            background-color: #F8F8F8;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-    form>input {
-        margin: 5px;
-        padding: 5px;
-    }
-</style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #0078D7;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #E8E8E8;
+        }
+
+        input[type="file"] {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #E8E8E8;
+        }
+
+        input[name='duration'] {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #E8E8E8;
+            width: 100%;
+        }
+
+        input[type="submit"] {
+            background-color: #0078D7;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0060BF;
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
 
 <body>
-    <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;">
-        Video to Gif Converter
-    </h1>
-    <form method="post" enctype="multipart/form-data">
-        <p> Upload File:
-            <input type="file" name="file">
-        </p>
-        <p>Enter Duration of the Gif
-            <input type="text" name="duration" id="duration">
-        </p>
-        <input type="submit" value="Upload">
-    </form>
+    <div class="container">
+        <h1>
+            Video to Gif Converter
+        </h1>
+
+        <form method="post" enctype="multipart/form-data">
+            <p> Upload File:
+            </p>
+            <input type="file" name="file" accept="video/mp4" required>
+            <input type="number" name="duration" id="duration" placeholder="Duration (in seconds)" min="1" max="60"
+                required>
+            <input type="submit" value="Upload">
+        </form>
+    </div>
 </body>
 
 </html>
