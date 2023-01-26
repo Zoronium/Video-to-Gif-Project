@@ -5,81 +5,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Video to Gif Converter</title>
     <style>
-        body {
-            background-color: #F8F8F8;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-
-        h1 {
-            color: #0078D7;
-            margin-bottom: 20px;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px #E8E8E8;
-        }
-
-        input[type="file"] {
-            margin-bottom: 20px;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            background-color: #E8E8E8;
-        }
-
-        input[name='duration'] {
-            margin-bottom: 20px;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            background-color: #E8E8E8;
-            width: 100%;
-        }
-
-        input[type="submit"] {
-            background-color: #0078D7;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #0060BF;
-        }
-
-        .error {
-            color: red;
-            margin-top: 10px;
-        }
+       
     </style>
 
 <body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="assets/funny-computer-animated-gif-29.gif" alt="" width="70" height="50" class="d-inline-block align-text-top">
+        <span class="auto-type" style="font-size: 40px;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"></a></span>
+              </div>
+              <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+              <script>
+                var typed = new Typed(".auto-type", {
+                  strings: ["Video to Gif Convertor "],
+                  typeSpeed: 100,
+                  backspeed: 100,
+                  loop: true
+                })
+              </script></span>
+          </a>
+        </div>
+      </nav>
     <div class="container">
         <h1>
-            Video to Gif Converter
+            Select the video you want to convert!!
         </h1>
-
+<br>
         <form method="post" enctype="multipart/form-data">
             <p> Upload File:
             </p>
@@ -90,5 +47,8 @@
         </form>
     </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 
 </html>

@@ -1,0 +1,76 @@
+body {
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    color: #0078D7;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(166, 189, 230);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #E8E8E8;
+}
+
+input[type="file"] {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #E8E8E8;
+}
+
+input[name='duration'] {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #E8E8E8;
+    width: 100%;
+}
+
+input[type="submit"] {
+    background-color: #0078D7;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0060BF;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}
+
+nav span {
+    font-size: 20px;
+    font-weight: bold;
+}
+nav img{
+    position: relative;
+    bottom:10px;
+}
