@@ -3,11 +3,12 @@ from werkzeug.utils import secure_filename
 from vidtogig import video_to_gif
 from os import remove, mkdir, rmdir, path, getenv
 
-app = Flask(__name__,
-            static_url_path='', 
-            static_folder='./templates',
-            template_folder='./templates'
-            )
+app = Flask(
+    __name__,
+    static_url_path="",
+    static_folder="./templates",
+    template_folder="./templates",
+)
 
 
 @app.route("/", methods=["GET"])
